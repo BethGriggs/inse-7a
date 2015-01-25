@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ScheduleMe</title>
+    <link rel="stylesheet" href="script/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="lib/ajax.js"></script>
+    <script src="script/raphael-min.js"></script>
+    <script src="script/wbt.js"></script>
+    <script src="script/script.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script>
+        $(function() {
+        $( "#datepicker1" ).datepicker();
+        });
+    </script>
+  </head>
+  <body>
+		<section id='navigation'>
+		</section>
+		<div id="svgCanvas">
+        <h1>Schedule Me - Week 1</h1>
+        <h2>Database Link Experiment</h2>
+        <div id="jCanvas" class="cCanvas"></div>
+    </div>
+</body>
+</html>
