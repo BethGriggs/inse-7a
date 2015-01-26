@@ -16,6 +16,8 @@ try{
   	task_estart DATE NOT NULL,
   	task_efinish DATE NOT NULL,
   	PRIMARY KEY(task_id));";
+
+    echo "connection successful";
 }
 
 ?>
