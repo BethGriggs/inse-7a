@@ -4,8 +4,6 @@ html {
     height: 100%;
 }
 
-
-
 body {
     background-color: #234454;
     font-family: "Helvetica", "Arial", sans-serif;
@@ -50,4 +48,8 @@ body {
 
 #add_task input{
     margin: 0.5em 0em 0.5em 0em;
+}
+
+#isDateValid {
+    font-size: 0.8em;
 }
