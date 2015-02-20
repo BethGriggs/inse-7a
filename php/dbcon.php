@@ -10,14 +10,17 @@ try{
   $dbh->exec("CREATE DATABASE IF NOT EXISTS $db;");
   $dbh->exec("USE $db");
 
-  $tasttable = "CREATE TABLE IF NOT EXISTS task(
+  $tasktable = "CREATE TABLE IF NOT EXISTS task(
   	task_id INT(11) NOT NULL AUTO_INCREMENT,
-  	task_name VARCHAR(40) NOT NULL,
+  	task_name VARCHAR(40) NOT NULL UNIQUE,
   	task_estart DATE NOT NULL,
   	task_efinish DATE NOT NULL,
   	PRIMARY KEY(task_id));";
-
-    echo "connection successful";
+    $dbh->exec($tasktable);
 }
+catch(PDOException $e)
+  {
+    echo $e->getMessage();
+  }
 
 ?>

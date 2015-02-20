@@ -1,9 +1,6 @@
 <?php
+require ("dbcon.php");
 
-$hostname = 'localhost';
-$username = 'root';
-$password = '';
-$db = 'inse7a';
 $tName = $_POST["tName"];
 $eStart = $_POST["eStart"];
 $eFinish = $_POST["eFinish"];
@@ -14,12 +11,13 @@ try{
   $dbh->exec("CREATE DATABASE IF NOT EXISTS $db;");
   $dbh->exec("USE $db");
 
-  if (!$tName===NULL) {
+  if ($tName !== NULL) {
   $insert1 = "INSERT INTO task(task_name,task_estart,task_efinish)
   VALUES('$tName','$eStart','$eFinish');";
 
   $dbh->exec($insert1);
-  echo "Successfully added!";
+  echo "Successfully added!\n";
+  echo '<input type=button onclick="getPage(\'index.php\')" value="Add New Task">';
     }
 
   else{
