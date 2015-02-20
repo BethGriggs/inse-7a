@@ -1,7 +1,7 @@
 <?php
 
 
-echo '<form id="add_task" onsubmit="return false;"">'.
+echo '<form id="add_task" onsubmit="return false;">'.
      '<label for="tName">Task Name</label>'.
                 '<input type="text" id="tName" name="tName" >'.
                 '<label for="eStart">Earliest Start</label>'.
